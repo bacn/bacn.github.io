@@ -1,1 +1,14 @@
-<video src="cat.webm" autoplay>
+<video id="cat" src="cat.webm" autoplay muted></video>
+
+<script>
+    var catVideo = document.getElementById("cat");
+
+    catVideo.addEventListener(
+        "ended",
+        function () {
+            catVideo.currentTime = 2;
+            catVideo.play();
+        },
+        false,
+    );
+</script>
